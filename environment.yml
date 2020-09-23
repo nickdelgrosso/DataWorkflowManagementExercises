@@ -1,4 +1,4 @@
-name: ge-2309
+name: data-man-wkshop
 channels:
   - defaults
 dependencies:
