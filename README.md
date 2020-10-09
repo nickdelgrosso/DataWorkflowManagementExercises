@@ -1,5 +1,7 @@
 # Data Workflow Management Exercises
 
+Robin, Ben, Miguel, hello!, Kolja, Ruper, CLement
+
 ## Installation: Python Packages
 
 This project uses jupyter lab, pandas, dask, papermill, and snakemake, along with a few other packages for downloading and reading the data.  The simplest way to get a working environment is to use the `environment.yml` file in this repository and activate it:
