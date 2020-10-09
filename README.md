@@ -34,10 +34,12 @@ data
        ...
        
 results
-  windfactor_hists
+  AL
     windfactorHist_AL_1985_Offshore.png
-  windfactor_timeseries  
     windfactorTimeSeries_AL_1985_Offshore.png
+  BE
+    windfactorHist_BE_1985_Offshore.png
+    windfactorTimeSeries_BE_1985_Offshore.png
     
  
  ```
