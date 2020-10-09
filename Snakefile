@@ -1,4 +1,5 @@
 import matplotlib
+import os
 
 matplotlib.use("Agg")
 
@@ -18,9 +19,14 @@ rule make_histogram:
     input:
         r"data\processed\{country}\Offshore-{year}.csv"
     output:
-        r"results\{country}\windfactorHist_{country}_{year}_Offshore.png"
+        hist_file = r"results\{country}\windfactorHist_{country}_{year}_Offshore.png",
+        notebook = r"logs\{country}\MakeHistogram-{country}-{year}.ipynb"
+    params:
+        wdir = os.getcwd()
     shell:
-        r"python scripts\make_hist.py {input} {output}"
+        r"""
+        papermill notebooks\MakeHistogram.ipynb {output.notebook} -p wdir {params.wdir} -p csv_file {input} -p hist_file {output.hist_file}
+        """
 
 
 rule:
